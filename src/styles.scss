@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: 'Lora', serif;
+  }
+
+  .project-background {
+    background-color: #E7DCFF;
+
+  .project-content{
+
+    width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+
+    .project-title {
+        text-align: center;
+        font-size: 36px;
+        color: rgb(155, 27, 219);
+        font-weight: 500;
+        padding-top: 10%;
+    }
+
+    .project-quote {
+        font-size: 28px;
+        text-align: center;
+        font-family: 'Caveat', cursive;
+        padding-top: 2%;
+        padding-left: 16%;
+        color: #FCFFD8;
+    }
+  }
+
+  #project-reviews {
+
+    .review {
+        width: 60%;
+        border-radius: 90px 0 0 0;
+        background-color: #F8F8F8;
+        margin: auto;
+        display: flex;
+      
+
+        .review-image {
+            width: calc(100% / 2);
+        }
+
+        .review-list {
+
+            width: calc(100% / 2);
+            
+            .review-points {
+                
+            }
+
+            .review-title {
+              font-size: 50px;
+            }
+        }
+    }
+
+  }
+}
