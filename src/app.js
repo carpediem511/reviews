@@ -2,7 +2,6 @@
 let reviews = [
 
   {
-    image: "./images/photo.ipg",
     title: "мой первый проект",
     stack: "c использованием html5 и css3",
     text: "Мне очень понравился креативный подход. Вёрстка хорошая - научиться мыслить такими блоками - это очень важно. Загружены шрифты, стили, работают ссылки. Понравилось, что добавила раздел с отзывами, по структуре как раздел с работами, только уже реальные изображения. За тень ещё отдельный плюсик - непростое свойство.",
@@ -11,7 +10,6 @@ let reviews = [
   },
 
   {
-    image: "./images/photo.ipg",
     title: "Лендинг для школы английского языка",
     stack: "Адаптивная вёрстка с использованием html5, css3",
     text: "У тебя всё очень хорошо получается, видно прогресс. Молодец, что дополнительно разобралась с формой - это очень полезный и важный навык уметь самостоятельно находить информацию. Отличное форматирование кода и хорошая вёрстка! Очень здорово, что используешь семантические теги, огромный плюс!",
@@ -20,7 +18,6 @@ let reviews = [
   },
 
   {
-    image: "./images/photo.ipg",
     title: "Вёрстка формы",
     stack: "Адаптивная вёрстка с использованием html5, css3 и BEM",
     text: "Посмотрела форму. В целом мне нравится, всё логично и понятно. Наверное, хотелось бы чуть понятнее названия классов, но понимаю, что это сложно подбирать. Нравится, что используешь переменные и псевдоклассы, получились кастомные чекбоксы. И, главное, форма работает и корректно отправляются значения!",
@@ -29,7 +26,6 @@ let reviews = [
   },
 
   {
-    image: "./images/photo.ipg",
     title: "Сайт для стоматологической клиники",
     stack: "Адаптивная вёрстка с использованием html, css и BEM",
     text: "Понравилась структура вёрстки и форматирование. Отлично получились градиенты и тени. Всё отлично выровнено по сетке - тут вообще нет замечаний по выравниваю элементов, идеально! Отдельный плюс за использование git, вижу много коммитов. И огромный плюс, конечно, за кастомный домен. Очень аккуратно и хорошо вышла адаптивная вёрстка, учитывая ещё то, что её надо было придумать самостоятельно. Сделать отдельную папку для стилей и изображений - тоже правильное решение. Работа одна из лучших, очень здорово получилось! Молодец!",
@@ -38,7 +34,6 @@ let reviews = [
   },
 
   {
-    image: "./images/photo.ipg",
     title: "Сайт для школы танцев",
     stack: "Адаптивная вёрстка с использованием html, css и BEM",
     text: "Всё получилось настолько идеально, что у меня даже почти нет замечаний! И на любых экранах тоже всё отлично работает. Получилась лучшая работа, я очень довольна результатом!! Вижу и коммиты, и свой домен, и на сайте всё аккуратно оформлено по макету. Мобильная версия тоже отличная! Можно перетягивать размер экрана в Chrome и наслаждаться!",
@@ -48,47 +43,48 @@ let reviews = [
 
 ];
 
-let currentIndex = 0
-
 const content = document.getElementById("project-reviews")
 
-let review = reviews[0]
+let currentIndex = 0
 
 let buttonRight = document.getElementById("button-right")
 
-buttonRight.addEventListener("click", showReview)
+let buttonLeft = document.getElementById("button-left")
 
-function showReview() {
 
+
+buttonRight.addEventListener("click", () => {
+
+
+  let review = reviews[0]
+    
+    let currentReview = reviews[currentIndex]
   
-  let currentReview = reviews[currentIndex]
-
- 
-       content.innerHTML += ` 
-
-        <div class="reviews">
-            <div class="review">
-                <div class="review-image"><img src="${review.image}" class="review-image-style"/></div>
-
-                <div class="review-list">
-                  <div class="review-point"> <img src="images/points.png" /> </div>
-                  <div class="review-title">${review.title}</div>
-                  <div class="review-stack">${review.stack}</div>
-                  <div class="review-text">${review.text}</div>
-                  <div class="review-author">${review.author}</div>
-
-                  <div class="reviewDateArray">
-                    <div class="review-date">${review.date}</div>
-                    <button id="button-right">вправо</button>
+    currentIndex = currentIndex + 1
+  
+   
+    content.innerHTML = ` 
+  
+    <div class="review">
+  
+                      <div class="review-image"><img class="review-person" src="/images/photo-person.png"/></div>
+      
+                      <div class="review-list">
+  
+                        <div> <img class="review-point" src="/images/points.png"/> </div>
+                        <div class="review-title">${review.title}</div>
+                        <div class="review-stack">${review.stack}</div>
+                        <div class="review-text">${review.text}</div>
+                        <div class="review-author">${review.author}</div>
+      
+                        <div class="reviewDateArray">
+                          <div class="review-date">${review.date}</div>
+                          <button id="button-right"> <img class="review-button" src="/images/icon-right.png" /> </button>
+                          <button id="button-left"> <img class="review-button" src="/images/icon-left.png" /> </button>
+                        </div>
+                      </div>
                   </div>
-                </div>
-            </div>
-        </div>
-      `
-      currentIndex = currentIndex + 1
-}
+  `
 
-
-
-showReview()
-
+        
+}) 

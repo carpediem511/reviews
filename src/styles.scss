@@ -40,19 +40,23 @@
         background-color: #F8F8F8;
         margin: auto;
         display: flex;
-      
 
         .review-image {
-            width: calc(100% / 2);
-        }
-
+          width: 40%;
+      
+      .review-person {
+        width: 100%;
+        margin-top: -10%;
+      }
+    }
         .review-list {
 
             width: calc(100% / 2);
             padding-right: 2%;
             
-            .review-points {
-                
+            .review-point {
+                width: 10%;
+                padding-top: 5%;
             }
 
             .review-title {
@@ -93,6 +97,16 @@
               font-size: 14px;
               padding-top: 10%;
               padding-bottom: 10%;
+            }
+
+            #button-right, #button-left {
+              width: 25%;
+              height: 20%;
+            }
+
+            .review-button {
+              object-fit: cover;
+              width: 50%;
             }
             }
         }
