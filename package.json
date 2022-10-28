@@ -8,10 +8,15 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.7.0",
     "parcel": "^2.7.0",
+    "parcel-reporter-static-files-copy": "^1.4.0",
     "prettier": "2.7.1"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
     "sass": "^1.55.0"
+  },
+  "staticFiles": {
+    "staticPath": "images",
+    "staticOutPath": "images"
   }
 }
