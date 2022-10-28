@@ -1,5 +1,14 @@
 let reviews = [
   {
+    title: "мой первый проект",
+    stack: "c использованием html5 и css3",
+    text: "Мне очень понравился креативный подход. Вёрстка хорошая - научиться мыслить такими блоками - это очень важно. Загружены шрифты, стили, работают ссылки. Понравилось, что добавила раздел с отзывами, по структуре как раздел с работами, только уже реальные изображения. За тень ещё отдельный плюсик - непростое свойство.",
+    author:
+      "Сапожникова Лилия Евгеньевна, основатель онлайн-школы программирования BitByBit",
+    date: "январь, 2022 год",
+  },
+
+  {
     title: "лендинг для школы английского языка",
     stack: "адаптивная вёрстка с использованием html5, css3",
     text: "У тебя всё очень хорошо получается, видно прогресс. Молодец, что дополнительно разобралась с формой - это очень полезный и важный навык уметь самостоятельно находить информацию. Отличное форматирование кода и хорошая вёрстка! Очень здорово, что используешь семантические теги, огромный плюс!",
@@ -36,7 +45,7 @@ let reviews = [
   },
 ]
 
-const content = document.getElementById("project-reviews")
+const content = document.getElementById("review-content")
 
 let currentIndex = 0
 
@@ -44,42 +53,54 @@ let buttonRight = document.getElementById("button-right")
 
 let buttonLeft = document.getElementById("button-left")
 
-buttonRight.addEventListener("click", () => {
-  let review = reviews[0]
+buttonRight.addEventListener("click", showNext)
 
-  let currentReview = reviews[currentIndex]
+buttonLeft.addEventListener("click", showBack)
 
+function showNext() {
   currentIndex = currentIndex + 1
+  showReview()
+}
+
+function showBack() {
+  currentIndex = currentIndex - 1
+  showReview()
+}
+
+function showReview() {
+  let review = reviews[currentIndex]
 
   content.innerHTML = ` 
   
-    <div class="review">
 
-    <div class="review-image"><img class="review-person" src="/images/photo-person.png"/></div>
 
-    <div class="review-list">
-
-      <div> <img class="review-point" src="/images/points.png"/> </div>
-      <div class="review-title">${review.title}</div>
-      <div class="review-stack">${review.stack}</div>
-      <div class="review-text">${review.text}</div>
-      <div class="review-author">${review.author}</div> 
-
-      <div class="reviewDateArray">
-        <div class="review-date">${review.date}</div>
-
-        
+      <div class="review-image">
+        <img class="review-person" src="/images/photo-person.png"/>
       </div>
 
-      
+  <div class="review-list">
+
+    <div> <img class="review-point" src="/images/points.png"/> </div>
+    <div class="review-title">${review.title}</div>
+    <div class="review-stack">${review.stack}</div>
+    <div class="review-text">${review.text}</div>
+    <div class="review-author">${review.author}</div> 
+
+    <div class="reviewDateArray">
+      <div class="review-date">${review.date}</div>
     </div>
 
-    <div class="buttons">
-        <button id="button-left"> <img class="review-button" src="/images/icon-left.png" /> </button>
-    <button id="button-right"> <img class="review-button" src="/images/icon-right.png" /> </button>
-</div>
-</div> 
+    
+  </div>
+
+
+      
+   
+   
+
   
                 
   `
-})
+}
+
+showReview()
