@@ -1,14 +1,4 @@
-
 let reviews = [
-
-  {
-    title: "мой первый проект",
-    stack: "c использованием html5 и css3",
-    text: "Мне очень понравился креативный подход. Вёрстка хорошая - научиться мыслить такими блоками - это очень важно. Загружены шрифты, стили, работают ссылки. Понравилось, что добавила раздел с отзывами, по структуре как раздел с работами, только уже реальные изображения. За тень ещё отдельный плюсик - непростое свойство.",
-    author: "Сапожникова Лилия Евгеньевна, основатель онлайн-школы программирования BitByBit",
-    date: "январь, 2022 год",
-  },
-
   {
     title: "Лендинг для школы английского языка",
     stack: "Адаптивная вёрстка с использованием html5, css3",
@@ -40,8 +30,7 @@ let reviews = [
     author: "Сапожникова Лилия Евгеньевна, основатель онлайн-школы программирования BitByBit",
     date: "май, 2022 год",
   },
-
-];
+]
 
 const content = document.getElementById("project-reviews")
 
@@ -51,19 +40,15 @@ let buttonRight = document.getElementById("button-right")
 
 let buttonLeft = document.getElementById("button-left")
 
-
-
 buttonRight.addEventListener("click", () => {
-
-
+  
   let review = reviews[0]
-    
-    let currentReview = reviews[currentIndex]
-  
-    currentIndex = currentIndex + 1
-  
-   
-    content.innerHTML = ` 
+
+  let currentReview = reviews[currentIndex]
+
+  currentIndex = currentIndex + 1
+
+  content.innerHTML = ` 
   
     <div class="review">
   
@@ -85,6 +70,4 @@ buttonRight.addEventListener("click", () => {
                       </div>
                   </div>
   `
-
-        
-}) 
+})
