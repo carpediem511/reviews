@@ -83,7 +83,6 @@ html {
               animation-duration: 1s;
 
               @keyframes anima {
-           
                 from {
                   opacity: 0.1;
                 }
@@ -142,6 +141,31 @@ html {
 
     .review-button {
       width: 100%;
+    }
+
+    .randomeButton {
+      padding: 5px 10px;
+      margin-left: 72%;
+      border-radius: 25px;
+      background-image: linear-gradient(
+        45deg,
+        #efd7fb 0%,
+        #c27de5 50%,
+        #9b1bdb 100%
+      );
+      background-position: 100% 0;
+      background-size: 200% 200%;
+      font-size: 10px;
+      border: none;
+      font-family: "Montserrat", sans-serif;
+      color: white;
+      box-shadow: 0 10px 20px 0 rgba(0, 40, 120, 0.35);
+      transition: 0.5s;
+
+      &pressed-button:hover {
+        box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+        background-position: 0 0;
+      }
     }
   }
 }

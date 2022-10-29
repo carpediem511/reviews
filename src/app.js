@@ -78,7 +78,11 @@ function showReview() {
 
       <div class="review-list">
 
-          <div> <img class="review-point" src="/images/points.png"/> </div>
+      
+          <img class="review-point" src="/images/points.png"/> 
+
+         
+      
           <div class="review-title">${review.title}</div>
           <div class="review-stack">${review.stack}</div>
           <div class="review-text">${review.text}</div>
@@ -91,6 +95,18 @@ function showReview() {
       </div>
 
   `
+}
+ 
+let randomeButton = document.getElementById("randome")
+randomeButton.addEventListener("click", randomizer)
+
+function randomizer() {
+  const getRandomNumber = (max) => {
+    return Math.floor(Math.random() * max)
+  }
+  const randomElement = getRandomNumber(reviews.length)
+
+  console.log(reviews[randomElement])
 }
 
 showReview()
