@@ -57,16 +57,6 @@ buttonRight.addEventListener("click", showNext)
 
 buttonLeft.addEventListener("click", showBack)
 
-function showNext() {
-  currentIndex = currentIndex + 1
-  showReview()
-}
-
-function showBack() {
-  currentIndex = currentIndex - 1
-  showReview()
-}
-
 function showReview() {
   let review = reviews[currentIndex]
 
@@ -81,8 +71,6 @@ function showReview() {
       
           <img class="review-point" src="/images/points.png"/> 
 
-         
-      
           <div class="review-title">${review.title}</div>
           <div class="review-stack">${review.stack}</div>
           <div class="review-text">${review.text}</div>
@@ -96,6 +84,30 @@ function showReview() {
 
   `
 }
+
+function showNext() {
+
+  if (currentIndex >= reviews.length){
+    currentIndex = 0
+  } else {
+    currentIndex = currentIndex + 1
+  }
+
+  showReview()
+}
+
+function showBack() {
+
+if (currentIndex <=0){
+  currentIndex = reviews.length
+} else {
+  currentIndex = currentIndex - 1
+}
+
+  showReview()
+}
+
+
  
 let randomeButton = document.getElementById("randome")
 randomeButton.addEventListener("click", randomizer)
@@ -106,7 +118,9 @@ function randomizer() {
   }
   const randomElement = getRandomNumber(reviews.length)
 
-  console.log(reviews[randomElement])
+  currentIndex = randomElement
+
+  showReview()
 }
 
 showReview()
