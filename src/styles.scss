@@ -24,19 +24,39 @@ html {
       padding-bottom: 5%;
     }
 
-    #project-reviews {
+    .main {
+      display: flex;
       width: 100%;
+  
+    
 
+    #button-left, #button-right {
+      margin-top: 25%;
+    margin-right: 4%;
+    margin-left: 4%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    color: rgb(155, 27, 219);
+    background-color: rgb(239, 215, 251);
+    box-shadow: 0 0 20px rgb(155, 27, 219, 0.7);
+    }
+
+
+
+    #project-reviews {
+
+width: 70%;
       .review {
-        width: 70%;
+   
         border-radius: 180px 0 0 0;
         background-color: #f8f8f8;
-        margin: auto;
+      
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 10%;
-        padding-bottom: 1%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
         #review-content {
           display: flex;
@@ -98,26 +118,18 @@ html {
               .review-date {
                 font-weight: 300;
                 font-size: 12px;
-                padding-top: 7%;
+                padding-top: 5%;
               }
             }
           }
         }
       }
 
-      .buttons {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 3% 0 3%;
+   
 
-        #button-right,
-        #button-left {
-          width: 60px;
-          height: 60px;
-          border: 1px solid;
-          border-radius: 30px;
-          color: rgb(155, 27, 219);
+       
+      }
+       
         }
 
         .review-button {
@@ -125,5 +137,5 @@ html {
         }
       }
     }
-  }
-}
+  
+
