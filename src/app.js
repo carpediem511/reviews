@@ -72,34 +72,24 @@ function showReview() {
 
   content.innerHTML = ` 
   
-
-
       <div class="review-image">
         <img class="review-person" src="/images/photo-person.png"/>
       </div>
 
-  <div class="review-list">
+      <div class="review-list">
 
-    <div> <img class="review-point" src="/images/points.png"/> </div>
-    <div class="review-title">${review.title}</div>
-    <div class="review-stack">${review.stack}</div>
-    <div class="review-text">${review.text}</div>
-    <div class="review-author">${review.author}</div> 
+          <div> <img class="review-point" src="/images/points.png"/> </div>
+          <div class="review-title">${review.title}</div>
+          <div class="review-stack">${review.stack}</div>
+          <div class="review-text">${review.text}</div>
+          <div class="review-author">${review.author}</div> 
 
-    <div class="reviewDateArray">
-      <div class="review-date">${review.date}</div>
-    </div>
+          <div class="reviewDateArray">
+            <div class="review-date">${review.date}</div>
+          </div>
 
-    
-  </div>
+      </div>
 
-
-      
-   
-   
-
-  
-                
   `
 }
 
