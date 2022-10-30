@@ -86,8 +86,7 @@ function showReview() {
 }
 
 function showNext() {
-
-  if (currentIndex >= reviews.length){
+  if (currentIndex >= reviews.length) {
     currentIndex = 0
   } else {
     currentIndex = currentIndex + 1
@@ -97,18 +96,15 @@ function showNext() {
 }
 
 function showBack() {
-
-if (currentIndex <=0){
-  currentIndex = reviews.length
-} else {
-  currentIndex = currentIndex - 1
-}
+  if (currentIndex <= 0) {
+    currentIndex = reviews.length
+  } else {
+    currentIndex = currentIndex - 1
+  }
 
   showReview()
 }
 
-
- 
 let randomeButton = document.getElementById("randome")
 randomeButton.addEventListener("click", randomizer)
 
