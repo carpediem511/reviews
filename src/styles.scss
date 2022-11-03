@@ -46,7 +46,6 @@ html {
       .randomeButton {
         padding: 4px 4px;
         margin-left: 38%;
-
         border-radius: 25px;
         background-color: #faf8ed;
         font-size: 14px;
@@ -63,7 +62,6 @@ html {
 
         @media (max-width: 768px) {
           margin-top: 1%;
-
           font-size: 10px;
           margin-left: 40%;
         }
@@ -97,37 +95,19 @@ html {
 
       #button-left,
       #button-right {
-        margin-top: 25%;
-
         width: 3%;
         border: none;
         background-color: #faf8ed;
-        margin: auto;
-        display: block;
+        margin: 17% auto;
         position: absolute;
-        top: 50px;
 
         &:hover {
           transform: scale(1.4);
           transition: 0.5s;
         }
 
-        @media (min-width: 769px) {
-          margin-top: 37%;
-          width: 4%;
-        }
-
         @media (max-width: 768px) {
-          margin-top: 33%;
-          width: 4%;
-        }
-
-        @media (max-width: 600px) {
-          margin-top: 35%;
-        }
-
-        @media (max-width: 425px) {
-          margin-top: 30%;
+          width: 5%;
         }
       }
 
