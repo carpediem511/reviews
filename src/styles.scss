@@ -98,13 +98,16 @@ html {
       #button-left,
       #button-right {
         margin-top: 25%;
-        margin-right: 5%;
-        margin-left: 5%;
+    
         width: 3%;
         border: none;
         background-color: #faf8ed;
         margin: auto;
         display: block;
+        position: absolute;
+        top: 50px;
+       
+        
 
         &:hover {
           transform: scale(1.4);
@@ -117,11 +120,12 @@ html {
         }
 
         @media (max-width: 425px) {
-          width: 20px;
+       
 
           margin-top: 30%;
         }
       }
+    
 
       #project-reviews {
         width: 75%;
@@ -129,6 +133,8 @@ html {
         @media (max-width: 768px) {
           width: 65%;
         }
+
+     
 
         .review {
           border-radius: 180px 0 0 0;
@@ -141,12 +147,21 @@ html {
             box-shadow: 2px 2px 20px #c8c6c6;
           }
 
+          @media (max-width: 375px) {
+            border-radius: 100px 0 0 0;
+          }
+
           #review-content {
             display: flex;
             background-image: url(/images/blur.png);
             background-size: 100%;
             background-repeat: no-repeat;
             border-radius: 180px 0 0 0px;
+
+            @media (max-width: 375px) {
+           
+              border-radius: 100px 0 0 0;
+            }
 
             .review-image {
               width: 50%;
@@ -178,7 +193,7 @@ html {
                 margin-top: 70%;
               }
 
-              @media (max-width: 380px) {
+              @media (max-width: 375px) {
                 display: none;
               }
             }
@@ -200,6 +215,11 @@ html {
                 width: 150%;
               }
 
+              @media (max-width: 375px) {
+
+                padding-left: 5%;
+              }
+
               @keyframes anima {
                 from {
                   opacity: 0.1;
@@ -216,6 +236,11 @@ html {
 
                 @media (max-width: 768px) {
                   width: 15%;
+                }
+
+                @media (max-width: 375px) {
+                  display: none;
+             
                 }
               }
 
@@ -240,6 +265,13 @@ html {
                 @media (max-width: 520px) {
                   font-size: 14px;
                   text-shadow: none;
+
+                  @media (max-width: 375px) {
+                    font-size: 10px;
+                    text-shadow: none;
+                    padding-top: 15%;
+   
+                  }
                 }
               }
 
@@ -295,10 +327,7 @@ html {
                 font-size: 13px;
                 line-height: 1.2;
 
-                span {
-                  font-weight: 700;
-                  font-size: 14px;
-                }
+               
 
                 @media (max-width: 1000px) {
                   font-size: 12px;
@@ -307,6 +336,21 @@ html {
                 @media (max-width: 768px) {
                   font-size: 5px;
                 }
+
+                @media (max-width: 375px) {
+                  font-size: 6px;
+             
+                }
+
+                span {
+                  font-weight: 700;
+                  font-size: 14px;
+                
+
+                @media (max-width: 375px) {
+                  font-size: 6px;
+             
+                }}
               }
 
               .reviewDateArray {
@@ -323,6 +367,11 @@ html {
 
                   @media (max-width: 520px) {
                     font-size: 6px;
+                  }
+
+                  @media (max-width: 375px) {
+                    font-size: 6px;
+                    padding-bottom: 2%;
                   }
                 }
               }
