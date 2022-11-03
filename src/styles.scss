@@ -95,19 +95,15 @@ html {
 
       #button-left,
       #button-right {
-        width: 3%;
+        width: 5%;
         border: none;
         background-color: #faf8ed;
-        margin: 17% auto;
-        position: absolute;
+        margin: 15% auto;
+        position: relative;
 
         &:hover {
           transform: scale(1.4);
           transition: 0.5s;
-        }
-
-        @media (max-width: 768px) {
-          width: 5%;
         }
       }
 
@@ -398,14 +394,5 @@ html {
       }
     }
 
-    .review-button {
-      width: 100%;
-
-      @media (max-width: 425px) {
-        width: 300%;
-        padding-right: 150%;
-        padding-top: 50%;
-      }
-    }
-  }
+ }
 }
