@@ -62,9 +62,9 @@ function showReview() {
 
   content.innerHTML = ` 
   
-      <div class="review-image">
-        <img class="review-person" src="/images/photo-person.png"/>
-      </div>
+
+<img class="review-person" src="/images/photo-person.png" style="width: 50%; height:110%; margin: -6.6% auto;" />
+   
 
       <div class="review-list">
 
@@ -86,7 +86,7 @@ function showReview() {
 }
 
 function showNext() {
-  if (currentIndex >= reviews.length) {
+  if (currentIndex >= reviews.length - 1) {
     currentIndex = 0
   } else {
     currentIndex = currentIndex + 1
@@ -97,7 +97,7 @@ function showNext() {
 
 function showBack() {
   if (currentIndex <= 0) {
-    currentIndex = reviews.length
+    currentIndex = reviews.length - 1
   } else {
     currentIndex = currentIndex - 1
   }
